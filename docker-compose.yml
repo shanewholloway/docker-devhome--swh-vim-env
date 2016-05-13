@@ -17,7 +17,7 @@ services:
       - devtools
       - devhome
     tty: true
-    entrypoint: /devtools/enter
+    entrypoint: [/devtools/enter]
     command: |
       zsh -c "echo \
       && echo -e \"some installed devtools: \n\
@@ -25,6 +25,6 @@ services:
          zsh:`which zsh` \n\
          node:`which node` \n\
          py3:`which python3` \n\
-         hg:`which hg`\" \n\
+         hg:`which hg` \n\" \
       && echo && exec zsh -l"
 
